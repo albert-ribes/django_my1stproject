@@ -1,0 +1,13 @@
+{% block content %}
+
+<h1>Contact</h1>
+<p>
+Dear {{ message.name }}, <br><br>
+The message has been successfully saved in the server. In the next 24 working hours, we will contact you either by e-mail ({{ message.email }}) or phone number ({{ message.phone }}).
+<br><br>
+Please save the reference ID = {{ message.pk }} for further tracking.
+<br><br>
+Thanks!
+</p>
+
+{% endblock %}
