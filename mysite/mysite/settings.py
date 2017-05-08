@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'contact',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,28 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
+
+MEDIA_ROOT = '/home/projects/django/mysite/media/'
+MEDIA_URL = '/media/'
+
+TINYMCE_JS_URL = '/home/projects/django/mysite/tinymce/media/tiny_mce/tiny_mce.js'
+TINYMCE_JS_ROOT = '/home/projects/django/mysite/tinymce/'
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace",
+    'theme': "simple",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+}
+TINYMCE_SPELLCHECKER = True
+TINYMCE_COMPRESSOR = True
+TINYMCE_EXTRA_MEDIA = {
+    'css': {
+        'all': [
+            ...
+        ],
+    },
+    'js': [
+        ...
+    ],
+}
+

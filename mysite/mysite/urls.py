@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^accounts/login/$', login, name='login'),
     url(r'^accounts/logout/$', logout, name='logout', kwargs={'next_page': '/'}),
     url(r'^contact/', include('contact.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
 ]

@@ -17,6 +17,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    def approved_comments(self):
+        return self.comments.filter(approved_comment=True)
 
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments')
@@ -31,5 +33,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
-    def approved_comments(self):
-        return self.comments.filter(approved_comment=True)
