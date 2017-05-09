@@ -1,20 +1,36 @@
 <head>
-    {{ form.media }}
-<script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
-  <script>
-  tinymce.init({
-    selector: '#mytextarea'
-  });
-  </script>
+{% load static %}
+	<script src='https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=qb4dlwrhg7484s47wzz69w5qailxztu8zgil8wz3z3zhesyv'></script>
+        <script>
+                tinymce.init({
+                selector: 'textarea',
+                height: 400,
+                width: 800,
+                theme: 'modern',
+                plugins: [
+                    'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                    'searchreplace wordcount visualblocks visualchars code fullscreen',
+                    'insertdatetime media nonbreaking save table contextmenu directionality',
+                    'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc'
+                ],
+                toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+                toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
+                image_advtab: true,
+                templates: [
+                        { title: 'Test template 1', content: 'Test 1' },
+                        { title: 'Test template 2', content: 'Test 2' }
+                ],
+                });
+        </script>
+	
 </head>
+
 {% block content %}
 <h1>Contact</h1>
-<form role="form" action="" method="post">
+<img src="{% static 'images/tree-png-779.png' %}" alt="Tree" style="width:20%;height:20%;">
+<form role="form" action="" method="post" novalidate>
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Submit</button>
-</form>
-<form method="post">
-    <textarea id="mytextarea">Hello, World!</textarea>
 </form>
 {% endblock %}

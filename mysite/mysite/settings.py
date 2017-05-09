@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from os.path import abspath, basename, dirname, join, normpath
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -118,33 +119,49 @@ USE_L10N = True
 USE_TZ = True
 
 
+LOGIN_REDIRECT_URL = '/'
+
+########## PATH CONFIGURATION
+# Absolute filesystem path to this Django project directory.
+#DJANGO_ROOT = dirname(dirname(abspath(__file__)))
+DJANGO_ROOT = '/home/projects/django/mysite/'
+
+########## MEDIA CONFIGURATION
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+MEDIA_ROOT = normpath(join(DJANGO_ROOT, 'media'))
+
+# URL that handles the media served from MEDIA_ROOT.
+MEDIA_URL = '/media/'
+########## END MEDIA CONFIGURATION
+
+
+########## STATIC FILE CONFIGURATION
+# Absolute path to the directory static files should be collected to. Don't put
+# anything in this directory yourself; store your static files in apps' static/
+# subdirectories and in STATICFILES_DIRS.
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+#STATIC_ROOT = normpath(join(DJANGO_ROOT, 'static'))
+
+# URL prefix for static files.
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL = '/'
 
-MEDIA_ROOT = '/home/projects/django/mysite/media/'
-MEDIA_URL = '/media/'
+# URL prefix for admin static files -- CSS, JavaScript and images.
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
-TINYMCE_JS_URL = '/home/projects/django/mysite/tinymce/media/tiny_mce/tiny_mce.js'
-TINYMCE_JS_ROOT = '/home/projects/django/mysite/tinymce/'
-TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "table,spellchecker,paste,searchreplace",
-    'theme': "simple",
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 10,
-}
-TINYMCE_SPELLCHECKER = True
-TINYMCE_COMPRESSOR = True
-TINYMCE_EXTRA_MEDIA = {
-    'css': {
-        'all': [
-            ...
-        ],
-    },
-    'js': [
-        ...
-    ],
-}
+# Additional locations of static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/home/projects/django/mysite/contact/static/',
+)
 
+# List of finder classes that know how to find static files in various
+# locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    #'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+########## END STATIC FILE CONFIGURATION
