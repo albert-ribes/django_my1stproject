@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}MySite:Home{% endblock %}
+
+{% block extrahead %}
+	{% load static %}
+{% endblock %}
+
+{% block content %}
+<h2>Home</h2>
+<p>This is a training Webpage done with Django.</p>
+<img src="{% static 'images/tree-png-779.png' %}" alt="Tree" style="width:20%;height:20%;">
+{% endblock %}
+

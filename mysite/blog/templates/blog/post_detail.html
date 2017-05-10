@@ -17,7 +17,7 @@
         {% else %}
 		<a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
 	{% endif %}
-        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.text|safe|linebreaksbr }}</p>
     </div>
 
 <hr>
