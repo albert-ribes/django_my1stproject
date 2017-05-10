@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^polls/', include('polls.urls')),
     url(r'^blog/', include('blog.urls')),
+    url(r'^fileupload/', include('fileupload.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/login/$', login, name='login'),
     url(r'^accounts/logout/$', logout, name='logout', kwargs={'next_page': '/'}),

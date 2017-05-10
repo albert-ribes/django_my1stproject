@@ -1,0 +1,97 @@
+which: no lshw in (/sbin:/usr/sbin:/usr/local/sbin:/root/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/lib64/jvm/jre/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/sbin:/bin:/usr/sbin:/opt/omni/bin:/opt/omni/sbin)
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/cciss/c0d0: unrecognized partition table type
+No partitions found
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/mapper/systemVG-LVRoot: unrecognized partition table type
+No partitions found
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/mapper/systemVG-LVSwap: unrecognized partition table type
+No partitions found
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/mapper/systemVG-LVOsbackup: unrecognized partition table type
+No partitions found
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/mapper/vgHANA-lv--data: unrecognized partition table type
+No partitions found
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/mapper/vgHANA-lv--sapmnt: unrecognized partition table type
+No partitions found
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/fioa: unrecognized partition table type
+No partitions found
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/fiob: unrecognized partition table type
+No partitions found
+
+sfdisk: ERROR: sector 0 does not have an msdos signature
+ /dev/md0: unrecognized partition table type
+No partitions found
+Disk /dev/cciss/c0d0 doesn't contain a valid partition table
+Disk /dev/mapper/systemVG-LVRoot doesn't contain a valid partition table
+Disk /dev/mapper/systemVG-LVSwap doesn't contain a valid partition table
+Disk /dev/mapper/systemVG-LVOsbackup doesn't contain a valid partition table
+Disk /dev/mapper/vgHANA-lv--data doesn't contain a valid partition table
+Disk /dev/mapper/vgHANA-lv--sapmnt doesn't contain a valid partition table
+Disk /dev/fioa doesn't contain a valid partition table
+Disk /dev/fiob doesn't contain a valid partition table
+Disk /dev/md0 doesn't contain a valid partition table
+cp: cannot stat `/var/log/messages.1': No such file or directory
+cp: cannot stat `/var/log/messages.2': No such file or directory
+Disk /dev/cciss/c0d0 doesn't contain a valid partition table
+Disk /dev/mapper/systemVG-LVRoot doesn't contain a valid partition table
+Disk /dev/mapper/systemVG-LVSwap doesn't contain a valid partition table
+Disk /dev/mapper/systemVG-LVOsbackup doesn't contain a valid partition table
+Disk /dev/mapper/vgHANA-lv--data doesn't contain a valid partition table
+Disk /dev/mapper/vgHANA-lv--sapmnt doesn't contain a valid partition table
+Disk /dev/fioa doesn't contain a valid partition table
+Disk /dev/fiob doesn't contain a valid partition table
+Disk /dev/md0 doesn't contain a valid partition table
+tar: Removing leading `/' from member names
+sr/sbin/tcpdchk -v":
+    Cannot find your inetd.conf or tlid.conf file.
+    Please specify its location.
+stderr output from "/usr/sbin/tcpdchk -a":
+    Cannot find your inetd.conf or tlid.conf file.
+    Please specify its location.
+stderr output from "/sbin/ldconfig -vN":
+    /sbin/ldconfig: Can't stat /usr/X11R6/lib64/Xaw3d: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/Xaw3d: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/X11R6/lib/Xaw3d: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib/Xaw3d: No such file or directory
+    /sbin/ldconfig: Can't stat /opt/kde3/lib: No such file or directory
+    /sbin/ldconfig: Can't stat /opt/kde3/lib64: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/sharp: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/java: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/perl: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/php: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/ocaml: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/python: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/lua: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/tcl: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/guile: No such file or directory
+    /sbin/ldconfig: Can't stat /usr/lib64/graphviz/ruby: No such file or directory
+    /sbin/ldconfig: Path `/lib' given more than once
+    /sbin/ldconfig: Path `/lib64' given more than once
+    /sbin/ldconfig: Path `/usr/lib' given more than once
+    /sbin/ldconfig: Path `/usr/lib64' given more than once
+stderr output from "/usr/bin/lpstat -t":
+    /usr/bin/lpstat: Unable to connect to server
+stderr output from "/sbin/fdisk -l":
+    Disk /dev/cciss/c0d0 doesn't contain a valid partition table
+    Disk /dev/mapper/systemVG-LVRoot doesn't contain a valid partition table
+    Disk /dev/mapper/systemVG-LVSwap doesn't contain a valid partition table
+    Disk /dev/mapper/systemVG-LVOsbackup doesn't contain a valid partition table
+    Disk /dev/mapper/vgHANA-lv--data doesn't contain a valid partition table
+    Disk /dev/mapper/vgHANA-lv--sapmnt doesn't contain a valid partition table
+    Disk /dev/fioa doesn't contain a valid partition table
+    Disk /dev/fiob doesn't contain a valid partition table
+    Disk /dev/md0 doesn't contain a valid partition table

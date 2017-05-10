@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}MySite:FileUpload{% endblock %}
+
+{% block extrahead %}
+        {% load static %}
+{% endblock %}
+
+{% block content %}
+<h2>FileUpload</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+  <p><a href="{% url 'home' %}">Return to home</a></p>
+{% endblock %}
+

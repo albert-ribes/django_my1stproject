@@ -1,0 +1,7 @@
+# partition table of /dev/cciss/c1d0
+unit: sectors
+
+/dev/cciss/c1d0p1 : start=     2048, size=   307208, Id=83, bootable
+/dev/cciss/c1d0p2 : start=   309256, size=585549164, Id=8e
+/dev/cciss/c1d0p3 : start=        0, size=        0, Id= 0
+/dev/cciss/c1d0p4 : start=        0, size=        0, Id= 0
