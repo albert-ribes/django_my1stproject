@@ -9,6 +9,13 @@
 <body>
     <div id="header">
         <h2>MySite</h2>
+
+	{% if request.user.is_authenticated %}Welcome '{{ request.user.username }}'
+	{% comment %}
+	{% else %}<a href="{% url django.contrib.auth.login %}">Login</a>{% endif %}
+	{% endcomment %}
+	{% endif %}
+		
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/polls/">Polls</a></li>

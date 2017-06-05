@@ -30,9 +30,21 @@
 
 {% block content %}
 <h2>Contact</h2>
-<form role="form" action="" method="post" novalidate>
+
+   <form action="" method="POST" class="form"> 
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-</form>
+    {% for field in form %}
+      <div class="fields-container">
+        {% if field.field.required %}
+            <p class="label">{{ field.label }} (*)</p>
+        {% else %}
+	    <p class="label">{{ field.label }}</p>
+        {% endif %}
+          {{ field }}
+      </div>
+      <!-- {{ field.errors }} -->
+    {% endfor %}
+    <button type="submit" id="form-button">Submit</button>
+   </form>
+
 {% endblock %}

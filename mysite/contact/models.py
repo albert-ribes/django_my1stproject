@@ -7,7 +7,7 @@ from tinymce.models import HTMLField
 class Contact(models.Model):
     name = models.CharField(max_length=20)
     surname = models.CharField(max_length=40)
-    phone = models.CharField(max_length=40)
+    phone = models.CharField(max_length=40, blank=True)
     email = models.CharField(max_length=40)
  
     subject = models.CharField(max_length=200)
