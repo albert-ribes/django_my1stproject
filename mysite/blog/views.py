@@ -1,10 +1,11 @@
 # Create your views here.
-from .models import Post, Comment
+from .models import Post, Comment, Tag
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -13,6 +14,13 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
+
+def posts_list_by_tag(request, tag_pk):
+    try:
+        posts =  Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date').filter(tags=tag_pk)
+    except ObjectDoesNotExist:
+        print("Error!!!")
+    return render(request, 'blog/posts_tag_list.html', {'posts': posts})
 
 @login_required
 def post_new(request):

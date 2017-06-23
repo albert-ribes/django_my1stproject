@@ -23,14 +23,14 @@ h1, h2, h3, h4 {
 }
 
 .tags {
-    margin: 4px 2px 2px 2px;
+    margin: 6px 6px 6px 6px;
 }
 
 .mytag {
     background-color: #ebebe0;
-    color: #009900;
-    margin: 10px 0px 0px -2px;
-    padding: 4px 4px 4px 4px;
+    color: #428bca;
+    margin: 10px 10px 0px -2px;
+    padding: 4px 8px 4px 9px;
 }
 
 
