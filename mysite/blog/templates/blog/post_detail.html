@@ -21,7 +21,7 @@
 
 	<div class="tags">
                         {% for tag in post.tags.all %}
-                        <span class="mytag">{{ tag.name }}</span>
+                        <span class="mytag"><a href="{% url 'posts_list_by_tag' tag_pk=tag.pk %}">{{ tag.name }}</a></span>
                         {% endfor %}
         </div>
 
