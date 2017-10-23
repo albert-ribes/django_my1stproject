@@ -30,6 +30,7 @@ urlpatterns = [
     #url(r'^accounts/logout/$', logout, name='logout', kwargs={'next_page': '/'}),
     url(r'^contact/', include('contact.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^portscanner/', include('portscanner.urls')),
 ]
 
 if settings.DEBUG is True:

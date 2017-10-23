@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}PortScanner: results{% endblock %}</title>
+    <link rel="stylesheet" href="style.css" />
+    {% block extrahead %}{% endblock %}
+</head>
+
+<body>
+<h2>PortScanner results</h2>
+<p>
+Host: {{ host }}<br><br>
+Ports: {{ ports }}
+<br><br>
+Thanks!
+</p>
+</body>
+</html>

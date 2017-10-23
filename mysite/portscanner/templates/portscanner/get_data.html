@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}PortScanner{% endblock %}</title>
+    <link rel="stylesheet" href="style.css" />
+    {% block extrahead %}{% endblock %}
+</head>
+
+<body>
+    <div id="header">
+        <h2>PortScanner</h2>
+        <p>Please introduce the details of the host you want to scan:</p>
+
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    <form method="POST" class="PortScannerForm" novalidate>{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+</body>
+</html>
+
