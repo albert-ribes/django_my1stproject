@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
+from portscanner.scripts.test import portscan
 
 from .forms import PortScannerForm
 
@@ -12,17 +13,20 @@ def get_data(request):
         # check whether it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
-            host,ports = form.save(commit=True)
-            data= {'host': host, 'ports': ports}
-            print("> INFO, views.py. Host: " + data['host'] + ", Ports: " + data['ports'])
-            # redirect to a new URL:
-            return render (request, 'portscanner/results.html', data)
+            hosts_str,ports_str = form.save(commit=True)
+            hosts=hosts_str.replace(" ", "").split(",")
+            ports=ports_str.replace(" ", "").split(",")
+            results=portscan(hosts, ports)
+            #res= {'results': results}
+            #print(res)
+            print(results)
+            #redirect to a new URL:
+            return render (request, 'portscanner/results.html', {'results' : results, 'hosts' : hosts, 'ports': ports})
             #return HttpResponseRedirect('portscanner/results/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
         form = PortScannerForm()
-
     return render(request, 'portscanner/get_data.html', {'form': form})
 
 """def results(request):

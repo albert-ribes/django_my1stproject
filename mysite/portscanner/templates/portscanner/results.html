@@ -9,8 +9,20 @@
 <body>
 <h2>PortScanner results</h2>
 <p>
-Host: {{ host }}<br><br>
-Ports: {{ ports }}
+Hosts: 
+
+{% for host in hosts %}
+	{{ host }}
+{% endfor %}
+<br><br>
+Ports: 
+{% for port in ports %}
+	{{ port }}
+{% endfor %}
+<br><br>
+
+Results:<br>
+{{ results|linebreaks }}
 <br><br>
 Thanks!
 </p>
